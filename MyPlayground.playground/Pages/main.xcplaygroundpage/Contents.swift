@@ -15,7 +15,9 @@
  */
 // write your code here
 
-
+func frozen() {
+    print("Let it go!")
+}
 
 
 
@@ -24,7 +26,10 @@
  */
 // write your code here
 
-
+func frozenAgain() {
+    let elsa = "Let it go!"
+    print(elsa)
+}
 
 
 /*: question3
@@ -32,31 +37,42 @@
  */
 // write your code here
 
-
-
+func favoriteCharacter(name: String) {
+    print("My favorite character is \(name).")
+    
+}
 
 /*: question4
  ### 4. Call the function you wrote in Question 3 using a constant you define. Then call it using a variable. Change the value of the variable, and call it again. What do you see in the console?
  */
 // write your code here
 
-
-
+let storm = "Ororo Munroe"
+favoriteCharacter(storm)
+var iceman = "Bobby Drake"
+favoriteCharacter(iceman)
 
 /*: question5
  ### 5. Write a function that takes an integer as an argument and prints the string "I got <number> problems but Swift ain't one" to the console.
  */
 // write your code here
 
+func ninetyNineProblems(number: Int) {
+    print("I got \(number) problems but Swift ain't one")
+}
 
-
+ninetyNineProblems(99)
 
 /*: question6
  ### 6. Write a function that takes two arguments, the name of a band (a `String`) and a number (an `Int`). It should print the message "My #<number> favorite band is <band>." to the console.
  */
 // write your code here
 
+func favoriteBand(number: Int, band: String) {
+    print("My \(number) favorite band is \(band).")
+}
 
+favoriteBand(8, band: "Sweetback")
 
 
 /*: question7
@@ -66,8 +82,7 @@ func badFavoriteBand(bandName: String, position: Int) {
     print("My #\(position) favorite band is \(bandName).")
 }
 
-badFavoriteBand("The Beatles", 2)
-
+badFavoriteBand("The Beatles", position: 2)
 
 
 
@@ -78,7 +93,7 @@ func alsoBadFavoriteBand(bandName: String, position: String) {
     print("My #\(position) favorite band is \(bandName)")
 }
 
-alsoBadFavoriteBand("Blink-182", position: 42)
+alsoBadFavoriteBand("Blink-182", position: "42")
 
 
 
@@ -88,6 +103,11 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  */
 // write your code here
 
+func madLib(noun: String, preposition: String, name: String) {
+    print("To \(noun) and \(preposition), \(name)!")
+}
+
+madLib("Spaceship", preposition: "over", name: "Angelica")
 
 
 
@@ -96,15 +116,20 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  */
 // write your code here
 
+func buzz() -> String {
+    return "Buzz Lightyear to the rescue!"
+}
 
-
-
+buzz()
 /*: question11
  ### 11. Create a function that takes no arguments and returns any number.
  */
 // write your code here
+func randomNumber() -> Int {
+    return 153
+}
 
-
+randomNumber()
 
 
 /*: question12
@@ -112,8 +137,11 @@ alsoBadFavoriteBand("Blink-182", position: 42)
  */
 // write your code here
 
+func buzzLightyear(name: String) -> String {
+    return "To infinitiy and beyond, \(name)!"
+}
 
-
+buzzLightyear("Byron")
 
 /*:
  [Solution](solution)
